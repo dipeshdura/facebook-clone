@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: Helvetica, Arial, sans-serif;
+}
+.facebook-app-container{
+  position: relative;
+}
+.facebook-app{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #fff;
+}
+.facebook-name{
+  margin-top: 25px;
+}
+.facebook-logo{
+  height:106px;
+}
+.facebook-text{
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 32px;
+  width: 500px;
+  margin-left: 25px;
+  margin-top: -10px;
+}
+.facebook-login-box{
+  display: flex;
+  flex-direction: column;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+  @apply p-3 rounded bg-white;
+}
+.facebook-login-box input{
+  @apply  p-4 rounded border border-solid outline-none hover:border focus:border-blue-400 my-2;
+
+}
+.signup-toggle-contain{
+  background: rgba(0,0,0,0.7);
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.signup-contain{
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  transform: translateY(-50%);
+  height: 555px;
+  width: 432px;
+  background-color: #fff;
+  border-radius:8px 8px 8px 8px;
+  border-top: 1px solid #dadde1;
+  box-sizing: border-box;
+  width: 432px;
+  box-shadow: 2px 4px 17px rgba(0,0,0,0.3);
+  
+}
+.left-side-head h1{
+  font-size: 32px;
+}
+.left-side-head p{
+  font-size: 15px;
+  color:#606770;
+}
+.right-side-head img{
+  cursor: pointer;
+}
+.hr-tag{
+  margin:8px 0;
+}
+.hr-tag hr{
+  margin-left: -12px;
+  margin-right: -12px;
+  height: 0.6px;
+  background: #dadde1;
+}
+.form-panel-name{
+  margin-bottom: -6px;
+}
+.form-panel-name input{
+  border-radius: 6px;
+  padding: 10px 8px;
+  border: 1px solid red;
+  margin: 5px 0;
+}
+.form-input{
+  margin:2px;
+}
+.form-input input:focus,
+.form-input input:hover{
+  border: 1px solid red;
+  outline:none;
+}
+.form-input-contact input,
+.form-input-password input{
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  margin:4px 0;
+}
+.form-input-date{
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+.input-date{
+  display: flex;
+  gap: 10px;
+}
+
+.input-month select{
+  height: 36px;
+  padding: 0 76px 0 0;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+.form-gender{
+  padding: 5px 12px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.form-gender label{
+  padding-right: 40px;
+}
+.terms-condition{
+  font-size: 11px;
+  margin:8px 0;
+}
+.info-term{
+  margin-bottom: 10px;
+}
+.terms-condition-information{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.signup-button{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-button button{
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  height: 36px;
+  padding: 0px 52px;
+  color: white;
+  text-align: center;
+  background:#00a400;
+}
+@media (max-width:766px) {
+  .facebook-app{
+    justify-content: normal;
+  }
+  .facebook-login-info{
+    display: block;
+    margin:auto;
+    margin-left: 54px;
+  }
+  .facebook-name{
+    margin-bottom: 25px;
+  }
+  .signup-contain{
+    left: 18%;
+  }
+}

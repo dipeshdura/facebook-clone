@@ -1,0 +1,251 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 3px 1px 9px rgba(0,0,0,0.3);
+    padding: 8px 0;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.header_container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left_section{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 12px;
+    /* min-width: 295px; */
+}
+.logo_icon{
+    width: 40px;
+    height: 40px;
+}
+.logo_icon img{
+    width: 100%;
+    height: 100%;
+}
+.search_icon{
+    font-size: 15px;
+    padding: 0 10px;
+    color:gray;
+}
+.search_input{
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #f5f4f4;
+    background-color: #F5F6F7;
+}
+
+.search_input input::placeholder{
+    font-size: 14px;
+}
+.search_input input{
+    background-color: #F5F6F7;
+    font-size: 13px;
+    outline: none;
+    border: none;
+    width: 200px;
+    padding:10px 0;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+.middle_section{
+    display: flex;
+    align-items: center;
+}
+.menu_box{
+    width: 40px;
+    height: 40px;
+}
+.menu_icon_bar{
+    width: 20px;
+    height: 20px;
+}
+.ul{
+    display: flex;
+    gap: 10px;
+}
+.navbar_item,
+.bar_item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.tooltip{
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.navbar_item:hover .tooltip,
+.bar_item:hover .tooltip{
+    display: flex;
+    align-items: center;
+    background-color: rgba(26, 20, 20,0.81);
+    border-radius: 8px;
+    color:#fff;
+    bottom:-50px;
+    position: absolute;
+    pointer-events: none;
+}
+.tooltip span{
+    font-size: 13px;
+    font-weight: 400;
+    text-wrap: nowrap;
+    padding:8px 6px;
+}
+.navbar_item ._icon,
+.bar_item ._icon{
+    color:hsl(217, 100%, 52%);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+.active{
+    padding:12px 30px;
+    border-bottom: 3.05px solid hsl(217, 100%, 52%);
+}
+.navbar_link{
+    padding:12px 30px;
+}
+.navbar_link:hover{
+    border-radius: 10px;
+    background-color: rgb(235, 234, 234);
+}
+.right_section{
+    display: flex;
+    gap:0.5rem;
+    margin-right: 25px;
+}
+.create_icon_box{
+    display: none;
+}
+.create_icon,
+.menu_icon,
+.message_icon,
+.notification_icon
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsl(210, 11%, 85%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.create_icon:hover,
+.menu_icon:hover,
+.message_icon:hover,
+.notification_icon:hover{
+    background-color: hsl(210, 11%, 90%);
+    
+}
+.create_icon:hover .tooltip,
+.menu_icon:hover .tooltip,
+.message_icon:hover .tooltip,
+.notification_icon:hover .tooltip,
+.profile_icon:hover .tooltip{
+    background-color: rgba(26, 20, 20,0.81);
+    color:#f5f4f4;
+display: block;
+bottom: -40px;
+border-radius: 8px;
+position: absolute;
+}
+
+.notification_icon .bellactive{
+    width: 40px;
+    height: 40px;
+}
+.profile_icon{
+    position: relative;
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile_icon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.menu_icon img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.bar_box{
+    display: none;
+}
+.second_menu_box{
+    display: none;
+}
+@media(max-width:1245px){
+    .search_input input{
+        width: 0;
+        padding-right: 0px;
+        margin-right: 4px;
+    }
+    .left_section{
+        min-width: none;
+    }
+}
+@media (max-width:1099px) {
+    .menu_icon_box{
+        display: none;
+    }
+    .create_icon_box{
+        display: block;
+    }
+    .gamepad_item{
+        display: none;
+    }
+    .bar_box{
+        display: block;
+    }
+}
+@media (max-width:701px) {
+    .navbar_item{
+        display: none;
+    }
+    .search_input{
+        width: 40px;
+        height: 40px;
+    }
+    .second_menu_box{
+        display: block;
+        margin-left: 12px;
+    }
+    .bar_box{
+        display: none;
+    }
+
+
+}
+@media (max-width:400px) {
+    .header_container{
+        justify-content: normal;
+    }
+}
