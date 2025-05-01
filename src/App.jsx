@@ -1,7 +1,7 @@
-// import Login from './Components/Login'
+import Login from './Components/Login'
 // import Signup from './Components/Signup'
-import Navbar from './Components/Navbar'
-import Main from './Components/Main'
+//import Navbar from './Components/Navbar'
+//import Main from './Components/Main'
 
 
 function App() {
